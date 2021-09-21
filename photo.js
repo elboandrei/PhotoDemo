@@ -1,4 +1,4 @@
-export class Photo {
+class Photo {
     constructor (width = 8, height = 10) {
         this.width = width;
         this.height = height;
@@ -24,7 +24,7 @@ export class Photo {
     }
 }
 
-export class MattedPhoto extends Photo {
+class MattedPhoto extends Photo {
     constructor(width, height, color) {
         super(width, height);
         this.color = color;
@@ -52,7 +52,7 @@ export class MattedPhoto extends Photo {
 
 }
 
-export class FramedPhoto extends Photo {
+class FramedPhoto extends Photo {
     constructor(width, height, material, style) {
         super(width, height);
         this.material = material;
@@ -77,4 +77,8 @@ export class FramedPhoto extends Photo {
     toString() {
         return `This is a ${this.width} by ${this.height} ${this.material} photo. The style is ${this.style} and it costs $${this.price()}.`;
     }
+}
+
+module.exports = {
+    Photo, MattedPhoto, FramedPhoto
 }

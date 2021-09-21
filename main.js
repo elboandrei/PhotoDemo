@@ -1,4 +1,4 @@
-import { Photo, MattedPhoto, FramedPhoto } from './photo.js';
+const { Photo, MattedPhoto, FramedPhoto } = require('./photo.js');
 
 let photo1 = new Photo(8, 10);
 console.log(photo1.toString());
